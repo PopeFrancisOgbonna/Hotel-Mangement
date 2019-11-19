@@ -17,11 +17,23 @@ namespace HotelManagementSystem
             InitializeComponent();
             timer1.Start();
         }
-
+        public static string user;
         private void Timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.lblUser.Text = user;
+            home.ShowDialog();
+        }
+
+        private void TxtUser_TextChanged(object sender, EventArgs e)
+        {
+            user = txtUser.Text;
         }
     }
 }

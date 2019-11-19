@@ -21,5 +21,35 @@ namespace HotelManagementSystem
         {
 
         }
+
+        private void BtnDashBoard_Click(object sender, EventArgs e)
+        {
+            scrollPane.Height = btnDashBoard.Height;
+            scrollPane.Top = btnDashBoard.Top;
+        }
+
+        private void BtnServices_Click(object sender, EventArgs e)
+        {
+            scrollPane.Top = btnServices.Top;
+            scrollPane.Height = btnServices.Height;
+        }
+
+        private void BtnCheckOut_Click(object sender, EventArgs e)
+        {
+            scrollPane.Top = btnCheckOut.Top;
+            scrollPane.Height = btnCheckOut.Height;
+        }
+
+        private void BtnCheckIn_Click(object sender, EventArgs e)
+        {
+            scrollPane.Top = btnCheckIn.Top;
+            scrollPane.Height = btnCheckIn.Height;
+        }
+
+        private void BtnLogOut_Click(object sender, EventArgs e)
+        {
+            scrollPane.Top = btnLogOut.Top;
+            scrollPane.Height = btnLogOut.Height;
+        }
     }
 }

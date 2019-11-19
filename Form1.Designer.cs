@@ -85,6 +85,7 @@
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LogIn";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // pictureBox1
             // 
@@ -159,6 +160,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(303, 38);
             this.txtUser.TabIndex = 7;
+            this.txtUser.TextChanged += new System.EventHandler(this.TxtUser_TextChanged);
             // 
             // pictureBox3
             // 
