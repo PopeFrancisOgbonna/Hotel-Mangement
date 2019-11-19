@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.scrollPane = new System.Windows.Forms.Panel();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
@@ -40,14 +41,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStatus = new System.Windows.Forms.ToolStripButton();
+            this.toolGuest = new System.Windows.Forms.ToolStripButton();
+            this.toolRooms = new System.Windows.Forms.ToolStripButton();
+            this.toolReserve = new System.Windows.Forms.ToolStripButton();
+            this.toolBill = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.scrollPane = new System.Windows.Forms.Panel();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +69,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(202, 583);
             this.panel1.TabIndex = 0;
+            // 
+            // scrollPane
+            // 
+            this.scrollPane.BackColor = System.Drawing.Color.DarkOrange;
+            this.scrollPane.Location = new System.Drawing.Point(188, 213);
+            this.scrollPane.Name = "scrollPane";
+            this.scrollPane.Size = new System.Drawing.Size(10, 100);
+            this.scrollPane.TabIndex = 8;
             // 
             // btnDashBoard
             // 
@@ -185,11 +193,11 @@
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(25, 25);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton7,
-            this.toolStripButton3,
-            this.toolStripButton4,
+            this.toolStatus,
+            this.toolGuest,
+            this.toolRooms,
+            this.toolReserve,
+            this.toolBill,
             this.toolStripButton5,
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(233, 100);
@@ -197,37 +205,46 @@
             this.toolStrip1.Size = new System.Drawing.Size(714, 32);
             this.toolStrip1.TabIndex = 7;
             // 
-            // toolStripButton1
+            // toolStatus
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(82, 29);
-            this.toolStripButton1.Text = "Status";
+            this.toolStatus.Image = ((System.Drawing.Image)(resources.GetObject("toolStatus.Image")));
+            this.toolStatus.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStatus.Name = "toolStatus";
+            this.toolStatus.Size = new System.Drawing.Size(82, 29);
+            this.toolStatus.Text = "Status";
             // 
-            // toolStripButton2
+            // toolGuest
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(86, 29);
-            this.toolStripButton2.Text = "Guests";
+            this.toolGuest.Image = ((System.Drawing.Image)(resources.GetObject("toolGuest.Image")));
+            this.toolGuest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolGuest.Name = "toolGuest";
+            this.toolGuest.Size = new System.Drawing.Size(86, 29);
+            this.toolGuest.Text = "Guests";
+            this.toolGuest.Click += new System.EventHandler(this.ToolGuest_Click);
             // 
-            // toolStripButton3
+            // toolRooms
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(121, 29);
-            this.toolStripButton3.Text = "Reservation";
+            this.toolRooms.Image = ((System.Drawing.Image)(resources.GetObject("toolRooms.Image")));
+            this.toolRooms.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolRooms.Name = "toolRooms";
+            this.toolRooms.Size = new System.Drawing.Size(148, 29);
+            this.toolRooms.Text = "Manage Rooms";
             // 
-            // toolStripButton4
+            // toolReserve
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(82, 29);
-            this.toolStripButton4.Text = "Billing";
+            this.toolReserve.Image = ((System.Drawing.Image)(resources.GetObject("toolReserve.Image")));
+            this.toolReserve.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolReserve.Name = "toolReserve";
+            this.toolReserve.Size = new System.Drawing.Size(121, 29);
+            this.toolReserve.Text = "Reservation";
+            // 
+            // toolBill
+            // 
+            this.toolBill.Image = ((System.Drawing.Image)(resources.GetObject("toolBill.Image")));
+            this.toolBill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBill.Name = "toolBill";
+            this.toolBill.Size = new System.Drawing.Size(82, 29);
+            this.toolBill.Text = "Billing";
             // 
             // toolStripButton5
             // 
@@ -246,22 +263,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(71, 29);
             this.toolStripButton6.Text = "Help";
             this.toolStripButton6.Click += new System.EventHandler(this.ToolStripButton6_Click);
-            // 
-            // scrollPane
-            // 
-            this.scrollPane.BackColor = System.Drawing.Color.DarkOrange;
-            this.scrollPane.Location = new System.Drawing.Point(188, 213);
-            this.scrollPane.Name = "scrollPane";
-            this.scrollPane.Size = new System.Drawing.Size(10, 100);
-            this.scrollPane.TabIndex = 8;
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(148, 29);
-            this.toolStripButton7.Text = "Manage Rooms";
             // 
             // Home
             // 
@@ -299,14 +300,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStatus;
+        private System.Windows.Forms.ToolStripButton toolGuest;
+        private System.Windows.Forms.ToolStripButton toolReserve;
+        private System.Windows.Forms.ToolStripButton toolBill;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.Panel scrollPane;
         public System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolRooms;
     }
 }

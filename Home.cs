@@ -61,5 +61,11 @@ namespace HotelManagementSystem
         {
             MessageBox.Show("This Application is Designed by Xpress SoftwareLab. xpressdreams.ng@gmail.com +2347031620728", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void ToolGuest_Click(object sender, EventArgs e)
+        {
+            Guest guest = new Guest();
+            guest.ShowDialog();
+        }
     }
 }
