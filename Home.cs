@@ -49,7 +49,12 @@ namespace HotelManagementSystem
 
         private void BtnLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var ans = MessageBox.Show("Do you want to Exit Application?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ans == DialogResult.Yes)
+            {
+                this.Close();
+            }
+           
         }
 
         private void ToolStripButton6_Click(object sender, EventArgs e)
