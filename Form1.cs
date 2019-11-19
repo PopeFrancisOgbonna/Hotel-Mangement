@@ -26,14 +26,33 @@ namespace HotelManagementSystem
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.lblUser.Text = user;
-            home.ShowDialog();
+            if (txtPost.Text == "" || txtPass.Text == "" || txtUser.Text == "")
+            {
+                MessageBox.Show("Please Fill out all Fields.", "Invalid Inputs", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //connects to home page
+                Home home = new Home();
+                home.lblUser.Text = user;
+                home.ShowDialog();
+
+                //clear the user input
+                txtUser.Clear();
+                txtPass.Clear();
+                txtPost.Clear();
+            }
+           
         }
 
         private void TxtUser_TextChanged(object sender, EventArgs e)
         {
             user = txtUser.Text;
+        }
+
+        private void TxtPass_TextChanged(object sender, EventArgs e)
+        {
+            txtPass.PasswordChar = '*';
         }
     }
 }
