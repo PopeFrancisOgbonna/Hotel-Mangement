@@ -35,21 +35,21 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtPost = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtPost = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,20 +57,21 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(158, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(987, 84);
+            this.label1.Size = new System.Drawing.Size(809, 84);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Meldevis Palace Resort";
+            this.label1.Text = "Hotel Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(12, 101);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(548, 474);
+            this.panel2.Size = new System.Drawing.Size(546, 374);
             this.panel2.TabIndex = 2;
             // 
             // btnLogin
@@ -78,7 +79,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.DarkGreen;
             this.btnLogin.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(868, 524);
+            this.btnLogin.Location = new System.Drawing.Point(870, 433);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(116, 48);
             this.btnLogin.TabIndex = 3;
@@ -106,67 +107,12 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(566, 272);
+            this.groupBox1.Location = new System.Drawing.Point(564, 195);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(433, 232);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login Details";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(21, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 94);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(104, 41);
-            this.txtUser.Multiline = true;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(303, 38);
-            this.txtUser.TabIndex = 7;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(21, 158);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(104, 104);
-            this.txtPass.Multiline = true;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(303, 38);
-            this.txtPass.TabIndex = 9;
-            // 
-            // txtPost
-            // 
-            this.txtPost.Location = new System.Drawing.Point(104, 167);
-            this.txtPost.Multiline = true;
-            this.txtPost.Name = "txtPost";
-            this.txtPost.Size = new System.Drawing.Size(303, 38);
-            this.txtPost.TabIndex = 10;
             // 
             // label2
             // 
@@ -179,12 +125,67 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Forget Password?";
             // 
+            // txtPost
+            // 
+            this.txtPost.Location = new System.Drawing.Point(104, 167);
+            this.txtPost.Multiline = true;
+            this.txtPost.Name = "txtPost";
+            this.txtPost.Size = new System.Drawing.Size(303, 38);
+            this.txtPost.TabIndex = 10;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(104, 104);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(303, 38);
+            this.txtPass.TabIndex = 9;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(21, 158);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(63, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(104, 41);
+            this.txtUser.Multiline = true;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(303, 38);
+            this.txtUser.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(21, 94);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(63, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(21, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(63, 57);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(666, 123);
+            this.lblDate.Location = new System.Drawing.Point(616, 114);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(66, 24);
             this.lblDate.TabIndex = 6;
@@ -195,7 +196,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(670, 156);
+            this.lblTime.Location = new System.Drawing.Point(644, 153);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(66, 24);
             this.lblTime.TabIndex = 7;
@@ -210,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(1009, 587);
+            this.ClientSize = new System.Drawing.Size(1007, 487);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.groupBox1);
@@ -223,9 +224,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
