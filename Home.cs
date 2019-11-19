@@ -19,7 +19,8 @@ namespace HotelManagementSystem
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            scrollPane.Height = btnDashBoard.Height;
+            scrollPane.Top = btnDashBoard.Top;
         }
 
         private void BtnDashBoard_Click(object sender, EventArgs e)
@@ -48,8 +49,17 @@ namespace HotelManagementSystem
 
         private void BtnLogOut_Click(object sender, EventArgs e)
         {
-            scrollPane.Top = btnLogOut.Top;
-            scrollPane.Height = btnLogOut.Height;
+            this.Close();
+        }
+
+        private void ToolStripButton6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("contact the I.T Admin for any Issues or xpressdreams.ng@gmail.com +2347031620728", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void ToolStripButton5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Application is Designed by Xpress SoftwareLab. xpressdreams.ng@gmail.com +2347031620728", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

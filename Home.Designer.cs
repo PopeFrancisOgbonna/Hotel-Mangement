@@ -42,12 +42,12 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.scrollPane = new System.Windows.Forms.Panel();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,11 +139,11 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Lime;
             this.lblUser.Location = new System.Drawing.Point(7, 161);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(51, 20);
+            this.lblUser.Size = new System.Drawing.Size(52, 18);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "label2";
             // 
@@ -187,14 +187,14 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripLabel1,
+            this.toolStripButton7,
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(233, 100);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(679, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(714, 32);
             this.toolStrip1.TabIndex = 7;
             // 
             // toolStripButton1
@@ -212,13 +212,6 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(86, 29);
             this.toolStripButton2.Text = "Guests";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(144, 29);
-            this.toolStripLabel1.Text = "Manage Rooms";
             // 
             // toolStripButton3
             // 
@@ -243,6 +236,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(81, 29);
             this.toolStripButton5.Text = "About";
+            this.toolStripButton5.Click += new System.EventHandler(this.ToolStripButton5_Click);
             // 
             // toolStripButton6
             // 
@@ -251,14 +245,23 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(71, 29);
             this.toolStripButton6.Text = "Help";
+            this.toolStripButton6.Click += new System.EventHandler(this.ToolStripButton6_Click);
             // 
             // scrollPane
             // 
-            this.scrollPane.BackColor = System.Drawing.Color.Tomato;
+            this.scrollPane.BackColor = System.Drawing.Color.DarkOrange;
             this.scrollPane.Location = new System.Drawing.Point(188, 213);
             this.scrollPane.Name = "scrollPane";
             this.scrollPane.Size = new System.Drawing.Size(10, 100);
             this.scrollPane.TabIndex = 8;
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(148, 29);
+            this.toolStripButton7.Text = "Manage Rooms";
             // 
             // Home
             // 
@@ -298,12 +301,12 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.Panel scrollPane;
         public System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
     }
 }
