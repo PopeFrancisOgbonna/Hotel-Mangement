@@ -229,6 +229,7 @@
             this.toolRooms.Name = "toolRooms";
             this.toolRooms.Size = new System.Drawing.Size(148, 29);
             this.toolRooms.Text = "Manage Rooms";
+            this.toolRooms.Click += new System.EventHandler(this.ToolRooms_Click);
             // 
             // toolReserve
             // 
@@ -237,6 +238,7 @@
             this.toolReserve.Name = "toolReserve";
             this.toolReserve.Size = new System.Drawing.Size(121, 29);
             this.toolReserve.Text = "Reservation";
+            this.toolReserve.Click += new System.EventHandler(this.ToolReserve_Click);
             // 
             // toolBill
             // 
@@ -245,6 +247,7 @@
             this.toolBill.Name = "toolBill";
             this.toolBill.Size = new System.Drawing.Size(82, 29);
             this.toolBill.Text = "Billing";
+            this.toolBill.Click += new System.EventHandler(this.ToolBill_Click);
             // 
             // toolStripButton5
             // 

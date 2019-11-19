@@ -67,5 +67,23 @@ namespace HotelManagementSystem
             Guest guest = new Guest();
             guest.ShowDialog();
         }
+
+        private void ToolRooms_Click(object sender, EventArgs e)
+        {
+            Rooms room = new Rooms();
+            room.ShowDialog();
+        }
+
+        private void ToolReserve_Click(object sender, EventArgs e)
+        {
+            Reservation reserve = new Reservation();
+            reserve.ShowDialog();
+        }
+
+        private void ToolBill_Click(object sender, EventArgs e)
+        {
+            Bills bill = new Bills();
+            bill.ShowDialog();
+        }
     }
 }
