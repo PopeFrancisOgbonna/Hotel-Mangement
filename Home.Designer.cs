@@ -148,7 +148,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.Lime;
+            this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(7, 161);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(52, 18);
@@ -202,7 +202,7 @@
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(233, 100);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(714, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(683, 32);
             this.toolStrip1.TabIndex = 7;
             // 
             // toolStatus
