@@ -456,7 +456,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(9, 18);
+            this.panel1.Location = new System.Drawing.Point(9, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 171);
             this.panel1.TabIndex = 2;

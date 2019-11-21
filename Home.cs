@@ -33,6 +33,8 @@ namespace HotelManagementSystem
         {
             scrollPane.Top = btnServices.Top;
             scrollPane.Height = btnServices.Height;
+            Services service = new Services();
+            service.ShowDialog();
         }
 
         private void BtnCheckOut_Click(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace HotelManagementSystem
 
         private void ToolStripButton6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("contact the I.T Admin for any Issues or xpressdreams.ng@gmail.com +2347031620728", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Contact the I.T Admin for any Issues or xpressdreams.ng@gmail.com +2347031620728", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void ToolStripButton5_Click(object sender, EventArgs e)
