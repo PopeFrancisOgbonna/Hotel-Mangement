@@ -35,28 +35,25 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.addGuestPane = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtRoom = new System.Windows.Forms.TextBox();
+            this.comboService = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboRooms = new System.Windows.Forms.ComboBox();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,7 +79,10 @@
             this.searchCalendar = new System.Windows.Forms.DateTimePicker();
             this.lblsearchInstruct = new System.Windows.Forms.Label();
             this.btnGO = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.chkMale = new System.Windows.Forms.CheckBox();
+            this.chkFemale = new System.Windows.Forms.CheckBox();
+            this.chkYes = new System.Windows.Forms.CheckBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.addGuestPane.SuspendLayout();
@@ -158,10 +158,10 @@
             this.addGuestPane.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.addGuestPane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addGuestPane.Controls.Add(this.lblTitle);
-            this.addGuestPane.Controls.Add(this.button4);
-            this.addGuestPane.Controls.Add(this.button3);
-            this.addGuestPane.Controls.Add(this.button2);
-            this.addGuestPane.Controls.Add(this.button1);
+            this.addGuestPane.Controls.Add(this.btnClear);
+            this.addGuestPane.Controls.Add(this.btnUpdate);
+            this.addGuestPane.Controls.Add(this.btnDelete);
+            this.addGuestPane.Controls.Add(this.btnSave);
             this.addGuestPane.Controls.Add(this.dataGridView1);
             this.addGuestPane.Controls.Add(this.groupBox3);
             this.addGuestPane.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,57 +171,71 @@
             this.addGuestPane.TabIndex = 1;
             this.addGuestPane.Visible = false;
             // 
-            // button4
+            // lblTitle
             // 
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(383, 446);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 41);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Clear Fields";
-            this.button4.UseVisualStyleBackColor = false;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(763, 4);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(74, 29);
+            this.lblTitle.TabIndex = 6;
+            this.lblTitle.Text = "label14";
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(711, 460);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.Firebrick;
+            this.btnClear.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(383, 446);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(158, 41);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear Fields";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(897, 460);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 41);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(711, 460);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 41);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
-            this.button1.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(269, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDelete.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(897, 460);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 41);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnSave.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(269, 446);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(96, 41);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // dataGridView1
             // 
@@ -233,22 +247,22 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.Controls.Add(this.chkNo);
+            this.groupBox3.Controls.Add(this.chkYes);
+            this.groupBox3.Controls.Add(this.chkFemale);
+            this.groupBox3.Controls.Add(this.chkMale);
             this.groupBox3.Controls.Add(this.dateTimePicker2);
             this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.txtRoom);
+            this.groupBox3.Controls.Add(this.comboService);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.comboRooms);
+            this.groupBox3.Controls.Add(this.txtZip);
+            this.groupBox3.Controls.Add(this.txtAddress);
+            this.groupBox3.Controls.Add(this.txtPhone);
+            this.groupBox3.Controls.Add(this.txtMail);
+            this.groupBox3.Controls.Add(this.txtLName);
+            this.groupBox3.Controls.Add(this.txtFName);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
@@ -270,28 +284,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Details";
             // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(402, 254);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(60, 25);
-            this.radioButton4.TabIndex = 27;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Yes";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(467, 255);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(52, 25);
-            this.radioButton3.TabIndex = 26;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(194, 387);
@@ -306,20 +298,20 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(323, 28);
             this.dateTimePicker1.TabIndex = 24;
             // 
-            // textBox7
+            // txtRoom
             // 
-            this.textBox7.Location = new System.Drawing.Point(441, 286);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(75, 28);
-            this.textBox7.TabIndex = 23;
+            this.txtRoom.Location = new System.Drawing.Point(441, 286);
+            this.txtRoom.Name = "txtRoom";
+            this.txtRoom.Size = new System.Drawing.Size(75, 28);
+            this.txtRoom.TabIndex = 23;
             // 
-            // comboBox2
+            // comboService
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(194, 320);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(322, 29);
-            this.comboBox2.TabIndex = 22;
+            this.comboService.FormattingEnabled = true;
+            this.comboService.Location = new System.Drawing.Point(194, 320);
+            this.comboService.Name = "comboService";
+            this.comboService.Size = new System.Drawing.Size(322, 29);
+            this.comboService.TabIndex = 22;
             // 
             // label13
             // 
@@ -330,78 +322,56 @@
             this.label13.TabIndex = 21;
             this.label13.Text = "Room No";
             // 
-            // comboBox1
+            // comboRooms
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 286);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 29);
-            this.comboBox1.TabIndex = 20;
+            this.comboRooms.FormattingEnabled = true;
+            this.comboRooms.Location = new System.Drawing.Point(194, 286);
+            this.comboRooms.Name = "comboRooms";
+            this.comboRooms.Size = new System.Drawing.Size(147, 29);
+            this.comboRooms.TabIndex = 20;
             // 
-            // textBox6
+            // txtZip
             // 
-            this.textBox6.Location = new System.Drawing.Point(194, 253);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(115, 28);
-            this.textBox6.TabIndex = 19;
+            this.txtZip.Location = new System.Drawing.Point(194, 253);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(115, 28);
+            this.txtZip.TabIndex = 19;
             // 
-            // textBox5
+            // txtAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(194, 194);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(323, 54);
-            this.textBox5.TabIndex = 18;
+            this.txtAddress.Location = new System.Drawing.Point(194, 194);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(323, 54);
+            this.txtAddress.TabIndex = 18;
             // 
-            // textBox4
+            // txtPhone
             // 
-            this.textBox4.Location = new System.Drawing.Point(194, 128);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(323, 28);
-            this.textBox4.TabIndex = 17;
+            this.txtPhone.Location = new System.Drawing.Point(194, 128);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(323, 28);
+            this.txtPhone.TabIndex = 17;
             // 
-            // textBox3
+            // txtMail
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(323, 28);
-            this.textBox3.TabIndex = 16;
+            this.txtMail.Location = new System.Drawing.Point(194, 161);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(323, 28);
+            this.txtMail.TabIndex = 16;
             // 
-            // radioButton2
+            // txtLName
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(382, 98);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 25);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.txtLName.Location = new System.Drawing.Point(194, 65);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(323, 28);
+            this.txtLName.TabIndex = 13;
             // 
-            // radioButton1
+            // txtFName
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(194, 98);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 25);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(194, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 28);
-            this.textBox2.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(194, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 28);
-            this.textBox1.TabIndex = 12;
+            this.txtFName.Location = new System.Drawing.Point(194, 32);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(323, 28);
+            this.txtFName.TabIndex = 12;
             // 
             // label12
             // 
@@ -669,15 +639,49 @@
             this.btnGO.Visible = false;
             this.btnGO.Click += new System.EventHandler(this.BtnGO_Click);
             // 
-            // lblTitle
+            // chkMale
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(763, 4);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(74, 29);
-            this.lblTitle.TabIndex = 6;
-            this.lblTitle.Text = "label14";
+            this.chkMale.AutoSize = true;
+            this.chkMale.Location = new System.Drawing.Point(207, 100);
+            this.chkMale.Name = "chkMale";
+            this.chkMale.Size = new System.Drawing.Size(72, 25);
+            this.chkMale.TabIndex = 28;
+            this.chkMale.Text = "Male";
+            this.chkMale.UseVisualStyleBackColor = true;
+            this.chkMale.CheckedChanged += new System.EventHandler(this.ChkMale_CheckedChanged);
+            // 
+            // chkFemale
+            // 
+            this.chkFemale.AutoSize = true;
+            this.chkFemale.Location = new System.Drawing.Point(390, 103);
+            this.chkFemale.Name = "chkFemale";
+            this.chkFemale.Size = new System.Drawing.Size(92, 25);
+            this.chkFemale.TabIndex = 29;
+            this.chkFemale.Text = "Female";
+            this.chkFemale.UseVisualStyleBackColor = true;
+            this.chkFemale.CheckedChanged += new System.EventHandler(this.ChkFemale_CheckedChanged);
+            // 
+            // chkYes
+            // 
+            this.chkYes.AutoSize = true;
+            this.chkYes.Location = new System.Drawing.Point(404, 256);
+            this.chkYes.Name = "chkYes";
+            this.chkYes.Size = new System.Drawing.Size(61, 25);
+            this.chkYes.TabIndex = 30;
+            this.chkYes.Text = "Yes";
+            this.chkYes.UseVisualStyleBackColor = true;
+            this.chkYes.CheckedChanged += new System.EventHandler(this.ChkYes_CheckedChanged);
+            // 
+            // chkNo
+            // 
+            this.chkNo.AutoSize = true;
+            this.chkNo.Location = new System.Drawing.Point(469, 257);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(53, 25);
+            this.chkNo.TabIndex = 31;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            this.chkNo.CheckedChanged += new System.EventHandler(this.ChkNo_CheckedChanged);
             // 
             // Guest
             // 
@@ -728,27 +732,23 @@
         private System.Windows.Forms.Button btnSearchName;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtRoom;
+        private System.Windows.Forms.ComboBox comboService;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboRooms;
+        private System.Windows.Forms.TextBox txtZip;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -770,5 +770,9 @@
         private System.Windows.Forms.Button btnGO;
         private System.Windows.Forms.Button btnManageGuest;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.CheckBox chkFemale;
+        private System.Windows.Forms.CheckBox chkMale;
+        private System.Windows.Forms.CheckBox chkNo;
+        private System.Windows.Forms.CheckBox chkYes;
     }
 }
