@@ -48,10 +48,29 @@
             this.toolBill = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAccomodation = new System.Windows.Forms.Label();
+            this.statusPane = new System.Windows.Forms.Panel();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.lblguest = new System.Windows.Forms.Label();
+            this.lblReserve = new System.Windows.Forms.Label();
+            this.inAndOutPane = new System.Windows.Forms.Panel();
+            this.lblInAndOut = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.statusPane.SuspendLayout();
+            this.inAndOutPane.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -212,6 +231,7 @@
             this.toolStatus.Name = "toolStatus";
             this.toolStatus.Size = new System.Drawing.Size(82, 29);
             this.toolStatus.Text = "Status";
+            this.toolStatus.Click += new System.EventHandler(this.ToolStatus_Click);
             // 
             // toolGuest
             // 
@@ -267,12 +287,148 @@
             this.toolStripButton6.Text = "Help";
             this.toolStripButton6.Click += new System.EventHandler(this.ToolStripButton6_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(233, 152);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(299, 206);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(233, 368);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(299, 206);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(538, 152);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(299, 206);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(538, 368);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(299, 206);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.lblReserve);
+            this.groupBox1.Controls.Add(this.lblguest);
+            this.groupBox1.Controls.Add(this.lblAvailable);
+            this.groupBox1.Controls.Add(this.lblAccomodation);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(8, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(376, 197);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblAccomodation
+            // 
+            this.lblAccomodation.AutoSize = true;
+            this.lblAccomodation.Location = new System.Drawing.Point(14, 27);
+            this.lblAccomodation.Name = "lblAccomodation";
+            this.lblAccomodation.Size = new System.Drawing.Size(51, 16);
+            this.lblAccomodation.TabIndex = 0;
+            this.lblAccomodation.Text = "label2";
+            // 
+            // statusPane
+            // 
+            this.statusPane.BackColor = System.Drawing.SystemColors.Desktop;
+            this.statusPane.Controls.Add(this.groupBox1);
+            this.statusPane.Location = new System.Drawing.Point(843, 231);
+            this.statusPane.Name = "statusPane";
+            this.statusPane.Size = new System.Drawing.Size(393, 210);
+            this.statusPane.TabIndex = 13;
+            this.statusPane.Visible = false;
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Location = new System.Drawing.Point(14, 72);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(51, 16);
+            this.lblAvailable.TabIndex = 1;
+            this.lblAvailable.Text = "label3";
+            // 
+            // lblguest
+            // 
+            this.lblguest.AutoSize = true;
+            this.lblguest.Location = new System.Drawing.Point(14, 117);
+            this.lblguest.Name = "lblguest";
+            this.lblguest.Size = new System.Drawing.Size(51, 16);
+            this.lblguest.TabIndex = 2;
+            this.lblguest.Text = "label4";
+            // 
+            // lblReserve
+            // 
+            this.lblReserve.AutoSize = true;
+            this.lblReserve.Location = new System.Drawing.Point(14, 162);
+            this.lblReserve.Name = "lblReserve";
+            this.lblReserve.Size = new System.Drawing.Size(51, 16);
+            this.lblReserve.TabIndex = 3;
+            this.lblReserve.Text = "label5";
+            // 
+            // inAndOutPane
+            // 
+            this.inAndOutPane.BackColor = System.Drawing.SystemColors.Desktop;
+            this.inAndOutPane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inAndOutPane.BackgroundImage")));
+            this.inAndOutPane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.inAndOutPane.Controls.Add(this.lblInAndOut);
+            this.inAndOutPane.Location = new System.Drawing.Point(843, 197);
+            this.inAndOutPane.Name = "inAndOutPane";
+            this.inAndOutPane.Size = new System.Drawing.Size(393, 297);
+            this.inAndOutPane.TabIndex = 14;
+            this.inAndOutPane.Visible = false;
+            // 
+            // lblInAndOut
+            // 
+            this.lblInAndOut.AutoSize = true;
+            this.lblInAndOut.BackColor = System.Drawing.Color.Transparent;
+            this.lblInAndOut.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInAndOut.ForeColor = System.Drawing.Color.Blue;
+            this.lblInAndOut.Location = new System.Drawing.Point(4, 244);
+            this.lblInAndOut.Name = "lblInAndOut";
+            this.lblInAndOut.Size = new System.Drawing.Size(63, 21);
+            this.lblInAndOut.TabIndex = 2;
+            this.lblInAndOut.Text = "label3";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1248, 604);
+            this.Controls.Add(this.inAndOutPane);
+            this.Controls.Add(this.statusPane);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -287,6 +443,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.statusPane.ResumeLayout(false);
+            this.inAndOutPane.ResumeLayout(false);
+            this.inAndOutPane.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +478,17 @@
         private System.Windows.Forms.Panel scrollPane;
         public System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.ToolStripButton toolRooms;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblAccomodation;
+        private System.Windows.Forms.Panel statusPane;
+        private System.Windows.Forms.Label lblReserve;
+        private System.Windows.Forms.Label lblguest;
+        private System.Windows.Forms.Label lblAvailable;
+        private System.Windows.Forms.Panel inAndOutPane;
+        private System.Windows.Forms.Label lblInAndOut;
     }
 }

@@ -42,9 +42,15 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtRoom = new System.Windows.Forms.TextBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
+            this.chkYes = new System.Windows.Forms.CheckBox();
+            this.chkFemale = new System.Windows.Forms.CheckBox();
+            this.chkMale = new System.Windows.Forms.CheckBox();
+            this.dateOut = new System.Windows.Forms.DateTimePicker();
+            this.dateIn = new System.Windows.Forms.DateTimePicker();
+            this.txtServiceCost = new System.Windows.Forms.TextBox();
+            this.txtcost = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboService = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.comboRooms = new System.Windows.Forms.ComboBox();
@@ -79,10 +85,6 @@
             this.searchCalendar = new System.Windows.Forms.DateTimePicker();
             this.lblsearchInstruct = new System.Windows.Forms.Label();
             this.btnGO = new System.Windows.Forms.Button();
-            this.chkMale = new System.Windows.Forms.CheckBox();
-            this.chkFemale = new System.Windows.Forms.CheckBox();
-            this.chkYes = new System.Windows.Forms.CheckBox();
-            this.chkNo = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.addGuestPane.SuspendLayout();
@@ -164,7 +166,7 @@
             this.addGuestPane.Controls.Add(this.btnSave);
             this.addGuestPane.Controls.Add(this.dataGridView1);
             this.addGuestPane.Controls.Add(this.groupBox3);
-            this.addGuestPane.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addGuestPane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addGuestPane.Location = new System.Drawing.Point(241, 12);
             this.addGuestPane.Name = "addGuestPane";
             this.addGuestPane.Size = new System.Drawing.Size(1033, 508);
@@ -174,6 +176,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(763, 4);
             this.lblTitle.Name = "lblTitle";
@@ -244,6 +247,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(476, 405);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
@@ -251,9 +256,11 @@
             this.groupBox3.Controls.Add(this.chkYes);
             this.groupBox3.Controls.Add(this.chkFemale);
             this.groupBox3.Controls.Add(this.chkMale);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.txtRoom);
+            this.groupBox3.Controls.Add(this.dateOut);
+            this.groupBox3.Controls.Add(this.dateIn);
+            this.groupBox3.Controls.Add(this.txtServiceCost);
+            this.groupBox3.Controls.Add(this.txtcost);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.comboService);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.comboRooms);
@@ -284,43 +291,106 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Details";
             // 
-            // dateTimePicker2
+            // chkNo
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(194, 387);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(323, 28);
-            this.dateTimePicker2.TabIndex = 25;
+            this.chkNo.AutoSize = true;
+            this.chkNo.Location = new System.Drawing.Point(469, 257);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(53, 25);
+            this.chkNo.TabIndex = 31;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            this.chkNo.CheckedChanged += new System.EventHandler(this.ChkNo_CheckedChanged);
             // 
-            // dateTimePicker1
+            // chkYes
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 354);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(323, 28);
-            this.dateTimePicker1.TabIndex = 24;
+            this.chkYes.AutoSize = true;
+            this.chkYes.Location = new System.Drawing.Point(404, 256);
+            this.chkYes.Name = "chkYes";
+            this.chkYes.Size = new System.Drawing.Size(61, 25);
+            this.chkYes.TabIndex = 30;
+            this.chkYes.Text = "Yes";
+            this.chkYes.UseVisualStyleBackColor = true;
+            this.chkYes.CheckedChanged += new System.EventHandler(this.ChkYes_CheckedChanged);
             // 
-            // txtRoom
+            // chkFemale
             // 
-            this.txtRoom.Location = new System.Drawing.Point(441, 286);
-            this.txtRoom.Name = "txtRoom";
-            this.txtRoom.Size = new System.Drawing.Size(75, 28);
-            this.txtRoom.TabIndex = 23;
+            this.chkFemale.AutoSize = true;
+            this.chkFemale.Location = new System.Drawing.Point(390, 103);
+            this.chkFemale.Name = "chkFemale";
+            this.chkFemale.Size = new System.Drawing.Size(92, 25);
+            this.chkFemale.TabIndex = 29;
+            this.chkFemale.Text = "Female";
+            this.chkFemale.UseVisualStyleBackColor = true;
+            this.chkFemale.CheckedChanged += new System.EventHandler(this.ChkFemale_CheckedChanged);
+            // 
+            // chkMale
+            // 
+            this.chkMale.AutoSize = true;
+            this.chkMale.Location = new System.Drawing.Point(207, 100);
+            this.chkMale.Name = "chkMale";
+            this.chkMale.Size = new System.Drawing.Size(72, 25);
+            this.chkMale.TabIndex = 28;
+            this.chkMale.Text = "Male";
+            this.chkMale.UseVisualStyleBackColor = true;
+            this.chkMale.CheckedChanged += new System.EventHandler(this.ChkMale_CheckedChanged);
+            // 
+            // dateOut
+            // 
+            this.dateOut.Location = new System.Drawing.Point(194, 387);
+            this.dateOut.Name = "dateOut";
+            this.dateOut.Size = new System.Drawing.Size(323, 28);
+            this.dateOut.TabIndex = 25;
+            // 
+            // dateIn
+            // 
+            this.dateIn.Location = new System.Drawing.Point(194, 354);
+            this.dateIn.Name = "dateIn";
+            this.dateIn.Size = new System.Drawing.Size(323, 28);
+            this.dateIn.TabIndex = 24;
+            // 
+            // txtServiceCost
+            // 
+            this.txtServiceCost.Location = new System.Drawing.Point(423, 318);
+            this.txtServiceCost.Name = "txtServiceCost";
+            this.txtServiceCost.Size = new System.Drawing.Size(94, 28);
+            this.txtServiceCost.TabIndex = 23;
+            this.txtServiceCost.Visible = false;
+            // 
+            // txtcost
+            // 
+            this.txtcost.Location = new System.Drawing.Point(422, 286);
+            this.txtcost.Name = "txtcost";
+            this.txtcost.Size = new System.Drawing.Size(94, 28);
+            this.txtcost.TabIndex = 23;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(367, 326);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 21);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Cost";
+            this.label14.Visible = false;
             // 
             // comboService
             // 
             this.comboService.FormattingEnabled = true;
             this.comboService.Location = new System.Drawing.Point(194, 320);
             this.comboService.Name = "comboService";
-            this.comboService.Size = new System.Drawing.Size(322, 29);
+            this.comboService.Size = new System.Drawing.Size(167, 29);
             this.comboService.TabIndex = 22;
+            this.comboService.SelectedIndexChanged += new System.EventHandler(this.ComboService_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(350, 294);
+            this.label13.Location = new System.Drawing.Point(366, 294);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 21);
+            this.label13.Size = new System.Drawing.Size(46, 21);
             this.label13.TabIndex = 21;
-            this.label13.Text = "Room No";
+            this.label13.Text = "Cost";
             // 
             // comboRooms
             // 
@@ -329,6 +399,7 @@
             this.comboRooms.Name = "comboRooms";
             this.comboRooms.Size = new System.Drawing.Size(147, 29);
             this.comboRooms.TabIndex = 20;
+            this.comboRooms.SelectedIndexChanged += new System.EventHandler(this.ComboRooms_SelectedIndexChanged);
             // 
             // txtZip
             // 
@@ -639,50 +710,6 @@
             this.btnGO.Visible = false;
             this.btnGO.Click += new System.EventHandler(this.BtnGO_Click);
             // 
-            // chkMale
-            // 
-            this.chkMale.AutoSize = true;
-            this.chkMale.Location = new System.Drawing.Point(207, 100);
-            this.chkMale.Name = "chkMale";
-            this.chkMale.Size = new System.Drawing.Size(72, 25);
-            this.chkMale.TabIndex = 28;
-            this.chkMale.Text = "Male";
-            this.chkMale.UseVisualStyleBackColor = true;
-            this.chkMale.CheckedChanged += new System.EventHandler(this.ChkMale_CheckedChanged);
-            // 
-            // chkFemale
-            // 
-            this.chkFemale.AutoSize = true;
-            this.chkFemale.Location = new System.Drawing.Point(390, 103);
-            this.chkFemale.Name = "chkFemale";
-            this.chkFemale.Size = new System.Drawing.Size(92, 25);
-            this.chkFemale.TabIndex = 29;
-            this.chkFemale.Text = "Female";
-            this.chkFemale.UseVisualStyleBackColor = true;
-            this.chkFemale.CheckedChanged += new System.EventHandler(this.ChkFemale_CheckedChanged);
-            // 
-            // chkYes
-            // 
-            this.chkYes.AutoSize = true;
-            this.chkYes.Location = new System.Drawing.Point(404, 256);
-            this.chkYes.Name = "chkYes";
-            this.chkYes.Size = new System.Drawing.Size(61, 25);
-            this.chkYes.TabIndex = 30;
-            this.chkYes.Text = "Yes";
-            this.chkYes.UseVisualStyleBackColor = true;
-            this.chkYes.CheckedChanged += new System.EventHandler(this.ChkYes_CheckedChanged);
-            // 
-            // chkNo
-            // 
-            this.chkNo.AutoSize = true;
-            this.chkNo.Location = new System.Drawing.Point(469, 257);
-            this.chkNo.Name = "chkNo";
-            this.chkNo.Size = new System.Drawing.Size(53, 25);
-            this.chkNo.TabIndex = 31;
-            this.chkNo.Text = "No";
-            this.chkNo.UseVisualStyleBackColor = true;
-            this.chkNo.CheckedChanged += new System.EventHandler(this.ChkNo_CheckedChanged);
-            // 
             // Guest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -690,11 +717,11 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1284, 552);
             this.Controls.Add(this.addGuestPane);
+            this.Controls.Add(this.searchGuestPane);
             this.Controls.Add(this.btnGO);
             this.Controls.Add(this.lblsearchInstruct);
             this.Controls.Add(this.searchCalendar);
             this.Controls.Add(this.txtSearchKey);
-            this.Controls.Add(this.searchGuestPane);
             this.Controls.Add(this.searchOptionPane);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -737,9 +764,9 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtRoom;
+        private System.Windows.Forms.DateTimePicker dateOut;
+        private System.Windows.Forms.DateTimePicker dateIn;
+        private System.Windows.Forms.TextBox txtcost;
         private System.Windows.Forms.ComboBox comboService;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboRooms;
@@ -774,5 +801,7 @@
         private System.Windows.Forms.CheckBox chkMale;
         private System.Windows.Forms.CheckBox chkNo;
         private System.Windows.Forms.CheckBox chkYes;
+        private System.Windows.Forms.TextBox txtServiceCost;
+        private System.Windows.Forms.Label label14;
     }
 }

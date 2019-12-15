@@ -37,11 +37,18 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdYes = new System.Windows.Forms.RadioButton();
-            this.rdNo = new System.Windows.Forms.RadioButton();
+            this.chkNot = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.chkIn = new System.Windows.Forms.CheckBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
+            this.chkYes = new System.Windows.Forms.CheckBox();
+            this.chkFemale = new System.Windows.Forms.CheckBox();
+            this.chkMale = new System.Windows.Forms.CheckBox();
             this.checkOutCalendar = new System.Windows.Forms.DateTimePicker();
             this.checkInCalendar = new System.Windows.Forms.DateTimePicker();
-            this.txtRoomNo = new System.Windows.Forms.TextBox();
+            this.txtServiceCost = new System.Windows.Forms.TextBox();
+            this.txtRoomCost = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboService = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.comboAvailableRoom = new System.Windows.Forms.ComboBox();
@@ -49,8 +56,6 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.rdFemale = new System.Windows.Forms.RadioButton();
-            this.rdMale = new System.Windows.Forms.RadioButton();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -87,16 +92,17 @@
             this.ReservePane.Controls.Add(this.btnSave);
             this.ReservePane.Controls.Add(this.dataGridView1);
             this.ReservePane.Controls.Add(this.groupBox3);
-            this.ReservePane.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReservePane.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReservePane.Location = new System.Drawing.Point(227, 12);
             this.ReservePane.Name = "ReservePane";
-            this.ReservePane.Size = new System.Drawing.Size(1045, 508);
+            this.ReservePane.Size = new System.Drawing.Size(1057, 508);
             this.ReservePane.TabIndex = 3;
             this.ReservePane.Visible = false;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(763, 4);
             this.lblTitle.Name = "lblTitle";
@@ -111,13 +117,14 @@
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(383, 446);
+            this.btnClear.Location = new System.Drawing.Point(383, 459);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(158, 41);
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear Fields";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnUpdate
             // 
@@ -131,6 +138,7 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -144,6 +152,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnSave
             // 
@@ -152,30 +161,39 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(269, 446);
+            this.btnSave.Location = new System.Drawing.Point(269, 459);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(96, 41);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(559, 37);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 405);
+            this.dataGridView1.Size = new System.Drawing.Size(489, 405);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Visible = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rdYes);
-            this.groupBox3.Controls.Add(this.rdNo);
+            this.groupBox3.Controls.Add(this.chkNot);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.chkIn);
+            this.groupBox3.Controls.Add(this.chkNo);
+            this.groupBox3.Controls.Add(this.chkYes);
+            this.groupBox3.Controls.Add(this.chkFemale);
+            this.groupBox3.Controls.Add(this.chkMale);
             this.groupBox3.Controls.Add(this.checkOutCalendar);
             this.groupBox3.Controls.Add(this.checkInCalendar);
-            this.groupBox3.Controls.Add(this.txtRoomNo);
+            this.groupBox3.Controls.Add(this.txtServiceCost);
+            this.groupBox3.Controls.Add(this.txtRoomCost);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.comboService);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.comboAvailableRoom);
@@ -183,8 +201,6 @@
             this.groupBox3.Controls.Add(this.txtAddress);
             this.groupBox3.Controls.Add(this.txtPhone);
             this.groupBox3.Controls.Add(this.txtEmail);
-            this.groupBox3.Controls.Add(this.rdFemale);
-            this.groupBox3.Controls.Add(this.rdMale);
             this.groupBox3.Controls.Add(this.txtLName);
             this.groupBox3.Controls.Add(this.txtFName);
             this.groupBox3.Controls.Add(this.label12);
@@ -203,79 +219,163 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(11, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(542, 425);
+            this.groupBox3.Size = new System.Drawing.Size(542, 445);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Details";
             // 
-            // rdYes
+            // chkNot
             // 
-            this.rdYes.AutoSize = true;
-            this.rdYes.Location = new System.Drawing.Point(415, 254);
-            this.rdYes.Name = "rdYes";
-            this.rdYes.Size = new System.Drawing.Size(60, 25);
-            this.rdYes.TabIndex = 27;
-            this.rdYes.TabStop = true;
-            this.rdYes.Text = "Yes";
-            this.rdYes.UseVisualStyleBackColor = true;
+            this.chkNot.AutoSize = true;
+            this.chkNot.Location = new System.Drawing.Point(396, 417);
+            this.chkNot.Name = "chkNot";
+            this.chkNot.Size = new System.Drawing.Size(53, 25);
+            this.chkNot.TabIndex = 31;
+            this.chkNot.Text = "No";
+            this.chkNot.UseVisualStyleBackColor = true;
+            this.chkNot.Visible = false;
+            this.chkNot.CheckedChanged += new System.EventHandler(this.ChkNot_CheckedChanged);
             // 
-            // rdNo
+            // label15
             // 
-            this.rdNo.AutoSize = true;
-            this.rdNo.Location = new System.Drawing.Point(480, 255);
-            this.rdNo.Name = "rdNo";
-            this.rdNo.Size = new System.Drawing.Size(52, 25);
-            this.rdNo.TabIndex = 26;
-            this.rdNo.TabStop = true;
-            this.rdNo.Text = "No";
-            this.rdNo.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.IndianRed;
+            this.label15.Location = new System.Drawing.Point(212, 419);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(175, 21);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Guest checked In ?";
+            this.label15.Visible = false;
+            // 
+            // chkIn
+            // 
+            this.chkIn.AutoSize = true;
+            this.chkIn.Location = new System.Drawing.Point(457, 415);
+            this.chkIn.Name = "chkIn";
+            this.chkIn.Size = new System.Drawing.Size(61, 25);
+            this.chkIn.TabIndex = 29;
+            this.chkIn.Text = "Yes";
+            this.chkIn.UseVisualStyleBackColor = true;
+            this.chkIn.Visible = false;
+            this.chkIn.CheckedChanged += new System.EventHandler(this.ChkIn_CheckedChanged);
+            // 
+            // chkNo
+            // 
+            this.chkNo.AutoSize = true;
+            this.chkNo.Location = new System.Drawing.Point(482, 255);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(53, 25);
+            this.chkNo.TabIndex = 28;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            this.chkNo.CheckedChanged += new System.EventHandler(this.ChkNo_CheckedChanged);
+            // 
+            // chkYes
+            // 
+            this.chkYes.AutoSize = true;
+            this.chkYes.Location = new System.Drawing.Point(417, 256);
+            this.chkYes.Name = "chkYes";
+            this.chkYes.Size = new System.Drawing.Size(61, 25);
+            this.chkYes.TabIndex = 28;
+            this.chkYes.Text = "Yes";
+            this.chkYes.UseVisualStyleBackColor = true;
+            this.chkYes.CheckedChanged += new System.EventHandler(this.ChkYes_CheckedChanged);
+            // 
+            // chkFemale
+            // 
+            this.chkFemale.AutoSize = true;
+            this.chkFemale.Location = new System.Drawing.Point(429, 100);
+            this.chkFemale.Name = "chkFemale";
+            this.chkFemale.Size = new System.Drawing.Size(92, 25);
+            this.chkFemale.TabIndex = 28;
+            this.chkFemale.Text = "Female";
+            this.chkFemale.UseVisualStyleBackColor = true;
+            this.chkFemale.CheckedChanged += new System.EventHandler(this.ChkFemale_CheckedChanged);
+            // 
+            // chkMale
+            // 
+            this.chkMale.AutoSize = true;
+            this.chkMale.Location = new System.Drawing.Point(207, 99);
+            this.chkMale.Name = "chkMale";
+            this.chkMale.Size = new System.Drawing.Size(72, 25);
+            this.chkMale.TabIndex = 28;
+            this.chkMale.Text = "Male";
+            this.chkMale.UseVisualStyleBackColor = true;
+            this.chkMale.CheckedChanged += new System.EventHandler(this.ChkMale_CheckedChanged);
             // 
             // checkOutCalendar
             // 
+            this.checkOutCalendar.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkOutCalendar.Location = new System.Drawing.Point(207, 387);
             this.checkOutCalendar.Name = "checkOutCalendar";
-            this.checkOutCalendar.Size = new System.Drawing.Size(323, 28);
+            this.checkOutCalendar.Size = new System.Drawing.Size(323, 30);
             this.checkOutCalendar.TabIndex = 25;
             // 
             // checkInCalendar
             // 
+            this.checkInCalendar.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkInCalendar.Location = new System.Drawing.Point(207, 354);
             this.checkInCalendar.Name = "checkInCalendar";
-            this.checkInCalendar.Size = new System.Drawing.Size(323, 28);
+            this.checkInCalendar.Size = new System.Drawing.Size(323, 30);
             this.checkInCalendar.TabIndex = 24;
             // 
-            // txtRoomNo
+            // txtServiceCost
             // 
-            this.txtRoomNo.Location = new System.Drawing.Point(454, 286);
-            this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(75, 28);
-            this.txtRoomNo.TabIndex = 23;
+            this.txtServiceCost.Location = new System.Drawing.Point(454, 320);
+            this.txtServiceCost.Name = "txtServiceCost";
+            this.txtServiceCost.Size = new System.Drawing.Size(75, 28);
+            this.txtServiceCost.TabIndex = 23;
+            this.txtServiceCost.Visible = false;
+            // 
+            // txtRoomCost
+            // 
+            this.txtRoomCost.Location = new System.Drawing.Point(454, 286);
+            this.txtRoomCost.Name = "txtRoomCost";
+            this.txtRoomCost.Size = new System.Drawing.Size(75, 28);
+            this.txtRoomCost.TabIndex = 23;
+            this.txtRoomCost.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(402, 327);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 21);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Cost";
+            this.label14.Visible = false;
             // 
             // comboService
             // 
+            this.comboService.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboService.FormattingEnabled = true;
             this.comboService.Location = new System.Drawing.Point(207, 320);
             this.comboService.Name = "comboService";
-            this.comboService.Size = new System.Drawing.Size(322, 29);
+            this.comboService.Size = new System.Drawing.Size(189, 29);
             this.comboService.TabIndex = 22;
+            this.comboService.Text = "Select Services";
             this.comboService.SelectedIndexChanged += new System.EventHandler(this.ComboService_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(363, 294);
+            this.label13.Location = new System.Drawing.Point(402, 293);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 21);
+            this.label13.Size = new System.Drawing.Size(46, 21);
             this.label13.TabIndex = 21;
-            this.label13.Text = "Room No";
+            this.label13.Text = "Cost";
+            this.label13.Visible = false;
             // 
             // comboAvailableRoom
             // 
+            this.comboAvailableRoom.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboAvailableRoom.FormattingEnabled = true;
             this.comboAvailableRoom.Location = new System.Drawing.Point(207, 286);
             this.comboAvailableRoom.Name = "comboAvailableRoom";
-            this.comboAvailableRoom.Size = new System.Drawing.Size(147, 29);
+            this.comboAvailableRoom.Size = new System.Drawing.Size(189, 29);
             this.comboAvailableRoom.TabIndex = 20;
+            this.comboAvailableRoom.Text = "Choose Room";
+            this.comboAvailableRoom.SelectedIndexChanged += new System.EventHandler(this.ComboAvailableRoom_SelectedIndexChanged);
             // 
             // txtZip
             // 
@@ -305,28 +405,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(323, 28);
             this.txtEmail.TabIndex = 16;
-            // 
-            // rdFemale
-            // 
-            this.rdFemale.AutoSize = true;
-            this.rdFemale.Location = new System.Drawing.Point(395, 98);
-            this.rdFemale.Name = "rdFemale";
-            this.rdFemale.Size = new System.Drawing.Size(91, 25);
-            this.rdFemale.TabIndex = 15;
-            this.rdFemale.TabStop = true;
-            this.rdFemale.Text = "Female";
-            this.rdFemale.UseVisualStyleBackColor = true;
-            // 
-            // rdMale
-            // 
-            this.rdMale.AutoSize = true;
-            this.rdMale.Location = new System.Drawing.Point(207, 98);
-            this.rdMale.Name = "rdMale";
-            this.rdMale.Size = new System.Drawing.Size(71, 25);
-            this.rdMale.TabIndex = 14;
-            this.rdMale.TabStop = true;
-            this.rdMale.Text = "Male";
-            this.rdMale.UseVisualStyleBackColor = true;
             // 
             // txtLName
             // 
@@ -502,7 +580,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1281, 541);
+            this.ClientSize = new System.Drawing.Size(1296, 538);
             this.Controls.Add(this.ReservePane);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -530,11 +608,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rdYes;
-        private System.Windows.Forms.RadioButton rdNo;
         private System.Windows.Forms.DateTimePicker checkOutCalendar;
         private System.Windows.Forms.DateTimePicker checkInCalendar;
-        private System.Windows.Forms.TextBox txtRoomNo;
+        private System.Windows.Forms.TextBox txtRoomCost;
         private System.Windows.Forms.ComboBox comboService;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboAvailableRoom;
@@ -542,8 +618,6 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.RadioButton rdFemale;
-        private System.Windows.Forms.RadioButton rdMale;
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label12;
@@ -562,5 +636,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnManageReserve;
         private System.Windows.Forms.Button btnAddReserve;
+        private System.Windows.Forms.CheckBox chkNo;
+        private System.Windows.Forms.CheckBox chkYes;
+        private System.Windows.Forms.CheckBox chkFemale;
+        private System.Windows.Forms.CheckBox chkMale;
+        private System.Windows.Forms.TextBox txtServiceCost;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox chkNot;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox chkIn;
     }
 }

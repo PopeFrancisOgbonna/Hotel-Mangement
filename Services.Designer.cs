@@ -106,6 +106,7 @@
             // addServicePane
             // 
             this.addServicePane.BackColor = System.Drawing.SystemColors.ControlText;
+            this.addServicePane.Controls.Add(this.viewServicePane);
             this.addServicePane.Controls.Add(this.dataGridView1);
             this.addServicePane.Controls.Add(this.btnClear);
             this.addServicePane.Controls.Add(this.btnSave);
@@ -120,7 +121,7 @@
             // 
             this.viewServicePane.BackColor = System.Drawing.SystemColors.ControlText;
             this.viewServicePane.Controls.Add(this.dataGridView2);
-            this.viewServicePane.Location = new System.Drawing.Point(477, 12);
+            this.viewServicePane.Location = new System.Drawing.Point(246, 2);
             this.viewServicePane.Name = "viewServicePane";
             this.viewServicePane.Size = new System.Drawing.Size(387, 262);
             this.viewServicePane.TabIndex = 8;
@@ -271,7 +272,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(877, 326);
-            this.Controls.Add(this.viewServicePane);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.addServicePane);

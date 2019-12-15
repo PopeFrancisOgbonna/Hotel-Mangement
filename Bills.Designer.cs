@@ -35,6 +35,8 @@
             this.btnPendingBill = new System.Windows.Forms.Button();
             this.btnAddBill = new System.Windows.Forms.Button();
             this.billPayPane = new System.Windows.Forms.Panel();
+            this.pendingPane = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnPay = new System.Windows.Forms.Button();
             this.billDetails = new System.Windows.Forms.GroupBox();
             this.txtOut = new System.Windows.Forms.TextBox();
@@ -55,15 +57,13 @@
             this.lblguest = new System.Windows.Forms.Label();
             this.lblservice = new System.Windows.Forms.Label();
             this.btnAddService = new System.Windows.Forms.Button();
-            this.pendingPane = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.billPayPane.SuspendLayout();
-            this.billDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pendingPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.billDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,10 +130,27 @@
             this.billPayPane.Controls.Add(this.btnPay);
             this.billPayPane.Controls.Add(this.billDetails);
             this.billPayPane.Controls.Add(this.pictureBox1);
-            this.billPayPane.Location = new System.Drawing.Point(230, 21);
+            this.billPayPane.Location = new System.Drawing.Point(220, 21);
             this.billPayPane.Name = "billPayPane";
             this.billPayPane.Size = new System.Drawing.Size(736, 395);
             this.billPayPane.TabIndex = 4;
+            // 
+            // pendingPane
+            // 
+            this.pendingPane.Controls.Add(this.dataGridView1);
+            this.pendingPane.Location = new System.Drawing.Point(276, 5);
+            this.pendingPane.Name = "pendingPane";
+            this.pendingPane.Size = new System.Drawing.Size(458, 388);
+            this.pendingPane.TabIndex = 3;
+            this.pendingPane.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(434, 242);
+            this.dataGridView1.TabIndex = 0;
             // 
             // btnPay
             // 
@@ -290,9 +307,11 @@
             this.comboGuest.FormattingEnabled = true;
             this.comboGuest.Location = new System.Drawing.Point(10, 257);
             this.comboGuest.Name = "comboGuest";
-            this.comboGuest.Size = new System.Drawing.Size(211, 24);
+            this.comboGuest.Size = new System.Drawing.Size(194, 24);
             this.comboGuest.TabIndex = 5;
+            this.comboGuest.Text = "Select Guest Name";
             this.comboGuest.Visible = false;
+            this.comboGuest.SelectedIndexChanged += new System.EventHandler(this.ComboGuest_SelectedIndexChanged);
             // 
             // comboServices
             // 
@@ -300,9 +319,11 @@
             this.comboServices.FormattingEnabled = true;
             this.comboServices.Location = new System.Drawing.Point(10, 322);
             this.comboServices.Name = "comboServices";
-            this.comboServices.Size = new System.Drawing.Size(211, 24);
+            this.comboServices.Size = new System.Drawing.Size(194, 24);
             this.comboServices.TabIndex = 6;
+            this.comboServices.Text = "Choose Service to Add";
             this.comboServices.Visible = false;
+            this.comboServices.SelectedIndexChanged += new System.EventHandler(this.ComboServices_SelectedIndexChanged);
             // 
             // lblguest
             // 
@@ -333,7 +354,7 @@
             this.btnAddService.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnAddService.Font = new System.Drawing.Font("Viner Hand ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddService.ForeColor = System.Drawing.Color.White;
-            this.btnAddService.Location = new System.Drawing.Point(138, 363);
+            this.btnAddService.Location = new System.Drawing.Point(121, 363);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(76, 35);
             this.btnAddService.TabIndex = 9;
@@ -342,29 +363,12 @@
             this.btnAddService.Visible = false;
             this.btnAddService.Click += new System.EventHandler(this.BtnAddService_Click);
             // 
-            // pendingPane
-            // 
-            this.pendingPane.Controls.Add(this.dataGridView1);
-            this.pendingPane.Location = new System.Drawing.Point(275, 4);
-            this.pendingPane.Name = "pendingPane";
-            this.pendingPane.Size = new System.Drawing.Size(458, 388);
-            this.pendingPane.TabIndex = 3;
-            this.pendingPane.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 364);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // Bills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(978, 441);
+            this.ClientSize = new System.Drawing.Size(961, 441);
             this.Controls.Add(this.btnAddService);
             this.Controls.Add(this.lblservice);
             this.Controls.Add(this.lblguest);
@@ -378,11 +382,11 @@
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.billPayPane.ResumeLayout(false);
+            this.pendingPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.billDetails.ResumeLayout(false);
             this.billDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pendingPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

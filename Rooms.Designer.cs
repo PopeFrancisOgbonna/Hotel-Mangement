@@ -40,6 +40,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSaveRoom = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImageLoad = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtCost = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             this.dataPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,6 +129,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(535, 348);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.Visible = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // btnDlete
@@ -143,6 +146,7 @@
             this.btnDlete.Text = "Delete";
             this.btnDlete.UseVisualStyleBackColor = false;
             this.btnDlete.Visible = false;
+            this.btnDlete.Click += new System.EventHandler(this.BtnDlete_Click);
             // 
             // btnUpdate
             // 
@@ -159,6 +163,7 @@
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnClear
             // 
@@ -174,6 +179,7 @@
             this.btnClear.Text = "Clear Fields";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnSaveRoom
             // 
@@ -189,9 +195,11 @@
             this.btnSaveRoom.Text = "Save";
             this.btnSaveRoom.UseVisualStyleBackColor = false;
             this.btnSaveRoom.Visible = false;
+            this.btnSaveRoom.Click += new System.EventHandler(this.BtnSaveRoom_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnImageLoad);
             this.groupBox2.Controls.Add(this.txtDescription);
             this.groupBox2.Controls.Add(this.txtCost);
@@ -213,6 +221,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Details";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(94, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // btnImageLoad
             // 
             this.btnImageLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,6 +241,7 @@
             this.btnImageLoad.TabIndex = 11;
             this.btnImageLoad.Text = "Upload Room Image";
             this.btnImageLoad.UseVisualStyleBackColor = true;
+            this.btnImageLoad.Click += new System.EventHandler(this.BtnImageLoad_Click);
             // 
             // txtDescription
             // 
@@ -332,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +382,6 @@
         private System.Windows.Forms.TextBox TxtStatus;
         private System.Windows.Forms.TextBox txtRoomNo;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
